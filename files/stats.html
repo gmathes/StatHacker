@@ -1,0 +1,332 @@
+<html>
+<head>
+
+
+<title>Yahoo Fantasy Basketball StatHacker</title>
+<meta name="description" content="My stuff" />
+
+<style type="text/css">
+BODY {
+        background-color: #FFFFFF;
+        font: 12px Arial, Helvetica, sans-serif;
+        color: #000000;
+}
+
+<style type='text/css'>
+.yspsctbg { background-color: #6C4517; }
+.yspscbrdbg { background-color: #CE6300; }
+.boxTitle {color:#FFFFFF;padding:3px;font:bold 10px Verdana, Arial, Helvetica, sans-serif; background-color:#CE6300;margin:0px;}
+</style>
+<style type="text/css">
+BODY {
+        background-color: #FFFFFF;
+        font: 12px Arial, Helvetica, sans-serif;
+        color: #000000;
+}
+
+P, TD, UL, DIV, .yspgen { font: 12px Arial, Helvetica, sans-serif; }
+B { font-weight : bold; }
+
+
+.l {text-align:left !important;}
+.r {text-align:right !important;}
+.c {text-align:center !important;}
+.headlines ul {list-style-type:none;padding:3px 0 0 0;margin:0;}
+.headlines li {background-image:url('http://us.i1.yimg.com/us.yimg.com/i/spo/bullet.gif');background-repeat:no-repeat;background-position: 3px 4px;padding-left:13px;margin-bottom:8px}
+.yspgens { font-weight: normal; font-size: 11px; color: #000000; }
+#yspTopStoryModule .yspleadstory { font-weight: normal; font-size: 13px; line-height: 150%; }
+.yspleadstory { font-weight: normal; font-size: 13px;  line-height: 17px; }
+.yspleadhdln { font: bold 20px Arial, Helvetica, sans-serif; color:#000000; }
+.yspsctnhdln { font: bold 18px Arial, Helvetica, sans-serif; color:#000000; }
+.yspsctnhdln2 { font: bold 13px Arial, Helvetica, sans-serif; color:#000000; }
+.yspseohdln { position: absolute; left: -9000px; }
+.yspmlbpasctnhdln { font: bold 18px Arial, Helvetica, sans-serif; color:#FFFFFF; }
+.ysptblhdr { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+.ysptblsbhdr { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+.yspdetailttl { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #000000; }
+.yspcptnnames { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #333333; }
+.yspscores { font: 10px Verdana, Arial, Helvetica, sans-serif; }
+.yspnotice { color: #636363; }
+.yspredzone { color: #CF0000; }
+.yspartclsrc { color: #666666; }
+.ysptimedate { font: 11px Arial, Helvetica, sans-serif; color:#999999; }
+.yspwin { color: #215A08; }
+.ysploss { color: #BC1819; }
+.ysplive { color: #CC6600; }
+
+a { color: #0000FF; }
+a:visited { color: #990099; }
+a.yspgens { font-weight:normal; font-size:11px; color:#0000FF; }
+a.ysphdrnav { font-weight: bold; color: #FFFFFF; }
+a.ysphdrnav:visited { color: #FFFFFF; }
+a.yspsubhdrnav { font: bold 11px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.yspsubhdrnav:visited { color: #FFFFFF; }
+a.ysptblhdrlinks { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.ysptblhdrlinks:visited { color: #FFFFFF; }
+a.ysptblsbhdr { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.ysptblsbhdr:visited { color: #FFFFFF; }
+a.ysptblhdrsts { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #0000FF; }
+a.ysptblhdrsts:visited { color: #0000FF; }
+a.yspmore { font: bold 10px Verdana, Arial, Helvetica, sans-serif; }
+a.yspinfo { font: 10px Verdana, Arial, Helvetica, sans-serif; }
+a.yspimg { color: #000000; }
+a.yspimg:visited { color: #000000; }
+
+.yspButton { width: 110; }
+.yspSlct { width: 180; }
+
+.yspwhitebg { background-color:#FFFFFF; }
+.yspblackbg { background-color: #000000; }
+.ysprtcol1 { background-color: #F6F7F2; }
+
+.yspnavbg { background-color: #F6F7F2; }
+
+.ysptblbdr1 { background-color: #333333; }
+.ysptblbdr2 { background-color: #CCCCCC; }
+.ysptblbdr3 { background-color: #999999; }
+.ysptblbdr4 { background-color: #DFE0DD; }
+
+.ysptblthmain { background-color: #666666; }
+.ysptblthmsts { background-color: #999999; }
+.ysptblthbody1 { background-color: #CCCCCC; }
+.ysptblthbody2 { background-color: #EEEEEE; }
+
+.ysptblclbg1 { background-color: #EEEEEE; }
+.ysptblclbg2 { background-color: #CCCCCC; }
+.ysptblclbg3 { background-color: #F4F5F1; }
+.ysptblclbg4 { background-color: #FFFFEE; }
+.ysptblclbg5 { background-color: #EEEEDD; }
+.ysptblclbg6 { background-color: #FFFFCC; }
+.ysptblclbg7 { background-color: #666666; }
+
+.ysprow1 { background-color: #FFFFFF; }
+.ysprow2 { background-color: #F6F7F2; }
+
+.yspxprthmain { background-color: #849CC6; }
+.yspxprthbody { background-color: #EFF3F9; }
+
+.ysphomegm { background-color: #E7E7C6; }
+.yspawaygm { background-color: #CECECE; }
+.ysptodaygm { background-color: #FFFF9C; }
+
+label {
+       cursor: pointer;
+       cursor: hand;
+       /* declared twice for browser differences */
+       /* notifies the user that clicking the lable selects the form */
+}
+
+.sportsTable { width:100%;}
+.sportsTable th, .sportsTable td{font:10px Verdana;}
+
+.sportsTable th {
+        padding:3px 3px;
+        border-right:1px solid #fff;
+        border-bottom:1px solid #fff;
+        text-align:left;
+        font-weight:normal;
+}
+.sportsTable th a {
+        font-weight:normal;
+}
+.sportsTable th.selected {
+        color:#ffffff;
+        background-color:#666666;
+}
+.sportsTable th.selected a
+{
+        color:#ffffff;
+}
+
+.sportsTable td {
+        padding:3px 3px;
+        border-right:1px solid #fff;
+        border-bottom:1px solid #fff;
+
+}
+.sportsTable td.position {
+        width:1px;
+}
+
+.sportsTable th.total, .sportsTable td.total{
+        text-align:center;
+}
+
+.sportsTable td.last, .sportsTable th.last {
+        border-right:0px none;
+}
+</style>
+
+</head>
+
+<body marginheight="0" marginwidth="10" topmargin="0" leftmargin="10" bgcolor="#ffffff" onLoad="refreshPage()">
+
+<div align="center">
+<!-- SpaceID=0 robot -->
+<!-- SpaceID=0 robot -->
+<br><br>
+
+
+<img border="0" src="pistons_flames_new.jpg" width="1010" height="150"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="7"></td>
+        </tr>
+      </table>
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr class="yspsctbg">
+          <td colspan="13" height="18" class="ysptblhdr">
+            &nbsp;New York
+          </td>
+        </tr>
+
+        <tr class="ysptblthbody1" align="right">
+          <td width="18%" height="18" class="yspdetailttl" align="left">&nbsp;Name</td>
+          <td width="6%" class="yspdetailttl">Min</td>
+          <td width="8%" class="yspdetailttl">FG</td>
+          <td width="8%" class="yspdetailttl">3Pt</td>
+          <td width="8%" class="yspdetailttl">FT</td>
+          <td width="8%" class="yspdetailttl">Off</td>
+          <td width="6%" class="yspdetailttl">Reb</td>
+          <td width="6%" class="yspdetailttl">Ast</td>
+          <td width="6%" class="yspdetailttl">TO</td>
+          <td width="6%" class="yspdetailttl">Stl</td>
+          <td width="6%" class="yspdetailttl">Blk</td>
+          <td width="6%" class="yspdetailttl">PF</td>
+          <td width="8%" class="yspdetailttl">Pts&nbsp;</td>
+        </tr>
+	
+
+	
+        <tr class="ysprow1" align="right">
+          <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110130">B. Knight  ->>  9:52 4th</a></td>
+          <td>26</td>
+          <td>2-5</td>
+          <td>0-0</td>
+          <td>2-2</td>
+          <td>2</td>
+          <td>8</td>
+          <td>7</td>
+          <td>3</td>
+          <td>3</td>
+          <td>0</td>
+          <td>3</td>
+          <td>6&nbsp;</td>
+        </tr>
+        <tr class="ysprow2" align="right">
+	  <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110126">J. Howard  ->>  9:00pm ET FXSW</a></td>
+	  <td>0</td>
+	  <td>0-0</td>
+	  <td>0-0</td>
+	  <td>0-0</td>
+	  <td>0</td>
+          <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0&nbsp;</td>
+	</tr>
+        <tr class="ysprow1" align="right">
+          <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110126">A. Kirilenko  ->>  9:00pm ET FXSW</a></td>
+          <td>0</td>
+          <td>0-0</td>
+          <td>0-0</td>
+          <td>0-0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0&nbsp;</td>
+        </tr>
+        <tr class="ysprow1" align="right">
+	  <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110126">Y. Ming  ->>  9:00pm ET FXSW</a></td>
+	  <td>0</td>
+	  <td>0-0</td>
+	  <td>0-0</td>
+	  <td>0-0</td>
+	  <td>0</td>
+          <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0&nbsp;</td>
+	</tr>
+        <tr class="ysprow2" align="right">
+          <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110105">D. Marshall  ->>  Half</a></td>
+          <td>9</td>
+          <td>1-3</td>
+          <td>1-2</td>
+          <td>3-4</td>
+          <td>0</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>2</td>
+          <td>6&nbsp;</td>
+        </tr>
+        <tr class="ysprow2" align="right">
+	  <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110108">M. Redd  ->>  Half</a></td>
+	  <td>18</td>
+	  <td>8-11</td>
+	  <td>1-2</td>
+	  <td>1-1</td>
+	  <td>1</td>
+          <td>2</td>
+	  <td>1</td>
+	  <td>1</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>1</td>
+	  <td>18&nbsp;</td>
+	</tr>
+        <tr class="ysprow2" align="right">
+	  <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110116">S. Abdur-Rahim  ->>  Half</a></td>
+	  <td>14</td>
+	  <td>1-4</td>
+	  <td>0-0</td>
+	  <td>3-4</td>
+	  <td>0</td>
+          <td>1</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>1</td>
+	  <td>5&nbsp;</td>
+	</tr>
+        <tr class="ysprow1" align="right">
+          <td align="left">&nbsp;  <a href="http://sports.yahoo.com/nba/boxscore?gid=2006110129">D. Stoudamire  ->>  :41.0 2nd</a></td>
+          <td>15</td>
+          <td>2-3</td>
+          <td>0-1</td>
+          <td>3-4</td>
+          <td>2</td>
+          <td>3</td>
+          <td>3</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>7&nbsp;</td>
+        </tr>
+	<!-- INSERT  -->
+
+
+
+   </table>
+   <h4>Total points:</h4>
+
+
+42
+</div>
+</body>
+</html>
